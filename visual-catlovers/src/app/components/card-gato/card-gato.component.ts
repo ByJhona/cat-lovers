@@ -1,0 +1,11 @@
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-card-gato',
+  imports: [],
+  templateUrl: './card-gato.component.html',
+  styleUrl: './card-gato.component.scss'
+})
+export class CardGatoComponent {
+  @Input() url = '';
+}

@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="container-gatos"  cdkDropList cdkDropListOrientation="mixed" (cdkDropListDropped)="mover($event)">
+        @for(url of lista_links; track url){
+            <app-card-gato [url]="url" cdkDrag class="card-gato"/>
+        }
+    </div>
+</div>

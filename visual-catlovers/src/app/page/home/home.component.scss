@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+  height: 100%;
+  .container-gatos {
+    display: flex;
+    justify-content:start;
+    .card-gato{
+        margin: 1rem;
+    }
+  }
+}
