@@ -19,7 +19,6 @@ public class GatinhosController {
 
     @GetMapping("/adotar")
     public Flux<ServerSentEvent<Gato>> adotarGatinhos(){
-        Flux<ServerSentEvent<Gato>> gato = this.gatoApiServ.adotarMuitosGatinhos();
         return this.gatoApiServ.adotarMuitosGatinhos();
     }
 
