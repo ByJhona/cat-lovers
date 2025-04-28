@@ -1,7 +1,29 @@
+
+
 <div class="container">
-    <div class="container-gatos"  cdkDropList cdkDropListOrientation="mixed" (cdkDropListDropped)="mover($event)">
-        @for(url of lista_links; track url){
-            <app-card-gato [url]="url" cdkDrag class="card-gato"/>
+
+    <div class="execucao-acao">
+        @if(iniciar){
+        <button class="botao" (click)="finalizarSSE()">
+          <img src="pata-vermelha.png" alt="Pausar SSE." />
+          <p>Pausar SSE</p>
+        </button>
+        }@else{
+        <button class="botao" (click)="comecarSSE()">
+          <img src="pata-verde.png" alt="Executar SSE" />
+          <p>Iniciar SSE</p>
+        </button>
+      
         }
-    </div>
+      </div>
+  <div
+    class="container-gatos"
+    cdkDropList
+    cdkDropListOrientation="mixed"
+    (cdkDropListDropped)="mover($event)"
+  >
+    @for(gato of ninhada_gatos; track gato){
+    <app-card-gato [gato]="gato" cdkDrag class="card-gato" />
+    }
+  </div>
 </div>

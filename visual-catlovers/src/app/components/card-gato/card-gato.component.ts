@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Gato } from '../../types/gato';
 
 @Component({
   selector: 'app-card-gato',
@@ -7,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card-gato.component.scss'
 })
 export class CardGatoComponent {
-  @Input() url = '';
+  @Input() gato!:Gato;
 }
